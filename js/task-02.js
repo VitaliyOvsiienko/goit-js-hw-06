@@ -7,8 +7,6 @@ const ingredients = [
   'Condiments',
 ];
 
-
-
 const ulEl = document.querySelector("#ingredients");
 
 const liEl = ingredients.map((ingredient) => {
@@ -21,3 +19,4 @@ const liEl = ingredients.map((ingredient) => {
 
 ulEl.append(...liEl);
 
+console.log(ulEl);

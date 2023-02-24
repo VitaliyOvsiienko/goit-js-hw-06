@@ -13,3 +13,14 @@ const images = [
   },
 ];
 
+
+const makeMyGallery = ({url, alt,}) => `<li class = "list-item"><img class = "img-item" src="${url}" alt=${alt}></li>`;
+
+const listEl = document.querySelector('.gallery')
+
+const markup = images.map((data) => makeMyGallery(data)).join('');
+
+// console.log(markup);
+
+listEl.insertAdjacentHTML('afterbegin', markup);
+

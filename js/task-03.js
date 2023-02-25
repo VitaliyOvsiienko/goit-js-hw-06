@@ -20,7 +20,7 @@ const listEl = document.querySelector('.gallery')
 
 const markup = images.map((data) => makeMyGallery(data)).join('');
 
-// console.log(markup);
+console.log(markup);
 
 listEl.insertAdjacentHTML('afterbegin', markup);
 

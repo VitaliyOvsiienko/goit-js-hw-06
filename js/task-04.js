@@ -1,19 +1,16 @@
-// const counterValue = document.querySelector("#value");
-// const incrementButton = document.querySelector("[data-action='increment']");
-// const decrementButton = document.querySelector("[data-action='decrement']");
 
-// let currentValue = 0;
+const decrementBtn = document.querySelector('[data-action="decrement"]');
+const incrementBtn = document.querySelector('[data-action="increment"]');
+const valueEl = document.querySelector('#value');
 
-// incrementButton.addEventListener("click", () => {
-//   currentValue += 1;
-//   counterValue.textContent = currentValue;
-// });
+let counterValue = 0;
 
-// decrementButton.addEventListener("click", () => {
-//   currentValue -= 1;
-//   counterValue.textContent = currentValue;
-// });
+decrementBtn.addEventListener('click', () => {
+    counterValue -= 1;
+    valueEl.textContent = counterValue;
+});
 
-// Этот код выбирает элементы интерфейса, добавляет слушатели событий клика на кнопки 
-// и обновляет значение переменной currentValue и содержимое элемента counterValue 
-// в зависимости от того, какая кнопка была нажата.
+incrementBtn.addEventListener('click', () => {
+    counterValue += 1;
+    valueEl.textContent = counterValue;
+});

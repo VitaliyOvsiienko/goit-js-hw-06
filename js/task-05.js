@@ -1,10 +1,12 @@
-const inputEl = document.querySelector('#name-input')
-const outputEl = document.querySelector('#name-output')
+const refs = {
+    inputEl: document.querySelector('#name-input'),
+    outputEl: document.querySelector('#name-output'),
+}
 
-inputEl.addEventListener('input', (event) => {
-    outputEl.textContent = event.target.value
+refs.inputEl.addEventListener('input', (event) => {
+    refs.outputEl.textContent = event.target.value
 
     if (event.target.value === '') {
-        outputEl.textContent = 'Anonymous'
+        refs.outputEl.textContent = 'Anonymous'
     }
 });
